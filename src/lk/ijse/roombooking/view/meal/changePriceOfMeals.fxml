@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="690.0" prefWidth="909.0"
+            style="-fx-background-color: white; -fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.141"
+            fx:controller="lk.ijse.roombooking.controller.ChangePriceOfMealsController">
+    <children>
+        <Label layoutX="14.0" layoutY="14.0" prefHeight="50.0" prefWidth="597.0" text="Change Price Of Meals">
+            <font>
+                <Font name="Arial Black" size="33.0"/>
+            </font>
+        </Label>
+        <TableView layoutX="36.0" layoutY="181.0" prefHeight="405.0" prefWidth="828.0">
+            <columns>
+                <TableColumn prefWidth="75.0" text="Meal ID"/>
+                <TableColumn prefWidth="75.0" text="Meal Description"/>
+                <TableColumn prefWidth="75.0" text="Unit Price"/>
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+        </TableView>
+        <JFXButton layoutX="552.0" layoutY="618.0" prefHeight="36.0" prefWidth="122.0"
+                   style="-fx-background-color: #FF962F; -fx-background-radius: 3em;" text="Change" textFill="WHITE"/>
+        <JFXButton layoutX="705.0" layoutY="618.0" prefHeight="36.0" prefWidth="98.0"
+                   style="-fx-background-color: #FF962F; -fx-background-radius: 3em;" text="Cancel" textFill="WHITE"/>
+        <ImageView fx:id="closeLabel" fitHeight="36.0" fitWidth="29.0" layoutX="866.0" layoutY="14.0"
+                   onMouseClicked="#closeLabelClicked" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/Delete_50px_1.png"/>
+            </image>
+        </ImageView>
+        <Label layoutX="28.0" layoutY="80.0" prefWidth="519.0" text="Enter Meal Name to Search Meals">
+            <font>
+                <Font name="Times New Roman" size="17.0"/>
+            </font>
+        </Label>
+        <JFXTextField focusColor="#ff962f" layoutX="28.0" layoutY="112.0" prefHeight="31.0" prefWidth="815.0"/>
+    </children>
+</AnchorPane>

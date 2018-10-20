@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="guestsPane" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="788.0" prefWidth="1357.0"
+            style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141"
+            fx:controller="lk.ijse.roombooking.controller.guestcontroller.GuestsController">
+    <children>
+        <Label layoutX="34.0" layoutY="39.0" prefHeight="20.0" prefWidth="127.0" text="Search Guest">
+            <font>
+                <Font name="Times New Roman" size="17.0"/>
+            </font>
+        </Label>
+        <JFXTextField fx:id="searchGuestText" focusColor="#ff962f" layoutX="35.0" layoutY="64.0"
+                      onKeyReleased="#searchGuestKeyReleased" prefHeight="31.0" prefWidth="1269.0"/>
+        <JFXButton fx:id="updateButton" disable="true" layoutX="1120.0" layoutY="715.0" onAction="#updateButtonAction"
+                   prefHeight="36.0" prefWidth="97.0" style="-fx-background-color: #FF962F; -fx-background-radius: 3em;"
+                   text="Update" textFill="WHITE"/>
+        <JFXButton fx:id="deleteButton" disable="true" layoutX="1244.0" layoutY="715.0" onAction="#deletebuttonAction"
+                   prefHeight="36.0" prefWidth="80.0" style="-fx-background-color: #FF962F; -fx-background-radius: 3em;"
+                   text="Delete" textFill="WHITE"/>
+        <Label layoutX="34.0" layoutY="117.0" prefHeight="20.0" prefWidth="226.0" text="List Of Guests">
+            <font>
+                <Font name="Times New Roman" size="17.0"/>
+            </font>
+        </Label>
+        <TableView fx:id="guestTable" layoutX="34.0" layoutY="152.0" onMouseClicked="#guestTableClicked"
+                   prefHeight="459.0" prefWidth="1290.0">
+            <columns>
+                <TableColumn prefWidth="137.99996948242188" text="Guest ID"/>
+                <TableColumn prefWidth="137.99996948242188" text="Gender"/>
+                <TableColumn minWidth="3.0" prefWidth="12.0" text="Guest Name"/>
+                <TableColumn prefWidth="75.0" text="NIC Number"/>
+                <TableColumn prefWidth="75.0" text="Telephone No"/>
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+        </TableView>
+        <JFXTextField fx:id="guestIdText" disable="true" focusColor="#ff962f" labelFloat="true" layoutX="34.0"
+                      layoutY="648.0" prefHeight="33.0" prefWidth="176.0" promptText="Guest ID"/>
+        <JFXTextField fx:id="genderText" disable="true" focusColor="#ff962f" labelFloat="true" layoutX="260.0"
+                      layoutY="648.0" onAction="#genderAction" prefHeight="33.0" prefWidth="116.0"
+                      promptText="Guest Gender"/>
+        <JFXTextField fx:id="guestNameText" disable="true" focusColor="#ff962f" labelFloat="true" layoutX="437.0"
+                      layoutY="648.0" onAction="#guestNameAction" prefHeight="33.0" prefWidth="261.0"
+                      promptText="Gust Name"/>
+        <JFXTextField fx:id="telephoneText" disable="true" focusColor="#ff962f" labelFloat="true" layoutX="1064.0"
+                      layoutY="648.0" onAction="#telephoneAction" prefHeight="33.0" prefWidth="251.0"
+                      promptText="Telephone No"/>
+        <JFXTextField fx:id="nicText" disable="true" focusColor="#ff962f" labelFloat="true" layoutX="753.0"
+                      layoutY="648.0" onAction="#nicAction" prefHeight="33.0" prefWidth="251.0"
+                      promptText="NIC Number"/>
+    </children>
+</AnchorPane>

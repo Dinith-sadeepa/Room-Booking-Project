@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="Reservaed_Full_Report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20"
+              rightMargin="20" topMargin="20" bottomMargin="20" uuid="9f377dce-6928-4f03-8e7e-ffe5201b8c6c">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="RoomBookingProjectDatabase"/>
+    <style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <subDataset name="ReservedDataset" uuid="a01f7717-a0c1-464b-9a48-39cc898000af">
+        <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+        <property name="com.jaspersoft.studio.data.defaultdataadapter" value="RoomBookingProjectDatabase"/>
+        <queryString language="SQL">
+            <![CDATA[select * from reservation r , reserved rs , guest g where reservationType = 'reserved' AND g.guestId = r.guestId AND r.reservationId = rs.reservationId]]>
+        </queryString>
+        <field name="reservationId" class="java.lang.Integer">
+            <property name="com.jaspersoft.studio.field.label" value="reservationId"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+        </field>
+        <field name="checkInDate" class="java.sql.Date">
+            <property name="com.jaspersoft.studio.field.label" value="checkInDate"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+        </field>
+        <field name="checkInTime" class="java.sql.Time">
+            <property name="com.jaspersoft.studio.field.label" value="checkInTime"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+        </field>
+        <field name="checkOutDate" class="java.sql.Date">
+            <property name="com.jaspersoft.studio.field.label" value="checkOutDate"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+        </field>
+        <field name="noOfAdults" class="java.lang.Integer">
+            <property name="com.jaspersoft.studio.field.label" value="noOfAdults"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+        </field>
+        <field name="guestId" class="java.lang.Integer">
+            <property name="com.jaspersoft.studio.field.label" value="guestId"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+        </field>
+        <field name="reservationType" class="java.lang.String">
+            <property name="com.jaspersoft.studio.field.label" value="reservationType"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+        </field>
+        <field name="reservationFee" class="java.math.BigDecimal">
+            <property name="com.jaspersoft.studio.field.label" value="reservationFee"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+        </field>
+        <field name="reservedId" class="java.lang.Integer">
+            <property name="com.jaspersoft.studio.field.label" value="reservedId"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="reserved"/>
+        </field>
+        <field name="COLUMN_10" class="java.lang.Integer">
+            <property name="com.jaspersoft.studio.field.label" value="reservationId"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="reserved"/>
+        </field>
+        <field name="reservedDate" class="java.sql.Date">
+            <property name="com.jaspersoft.studio.field.label" value="reservedDate"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="reserved"/>
+        </field>
+        <field name="reservedTime" class="java.sql.Time">
+            <property name="com.jaspersoft.studio.field.label" value="reservedTime"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="reserved"/>
+        </field>
+        <field name="COLUMN_13" class="java.lang.Integer">
+            <property name="com.jaspersoft.studio.field.label" value="guestId"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="guest"/>
+        </field>
+        <field name="gender" class="java.lang.String">
+            <property name="com.jaspersoft.studio.field.label" value="gender"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="guest"/>
+        </field>
+        <field name="guestName" class="java.lang.String">
+            <property name="com.jaspersoft.studio.field.label" value="guestName"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="guest"/>
+        </field>
+        <field name="nic" class="java.lang.String">
+            <property name="com.jaspersoft.studio.field.label" value="nic"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="guest"/>
+        </field>
+        <field name="telephoneNo" class="java.lang.String">
+            <property name="com.jaspersoft.studio.field.label" value="telephoneNo"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="guest"/>
+        </field>
+        <group name="reservedId">
+            <groupExpression><![CDATA[$F{reservedId}]]></groupExpression>
+        </group>
+    </subDataset>
+    <queryString language="SQL">
+        <![CDATA[select * from reservation where reservationType = 'reserved']]>
+    </queryString>
+    <field name="reservationId" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.label" value="reservationId"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+    </field>
+    <field name="checkInDate" class="java.sql.Date">
+        <property name="com.jaspersoft.studio.field.label" value="checkInDate"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+    </field>
+    <field name="checkInTime" class="java.sql.Time">
+        <property name="com.jaspersoft.studio.field.label" value="checkInTime"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+    </field>
+    <field name="checkOutDate" class="java.sql.Date">
+        <property name="com.jaspersoft.studio.field.label" value="checkOutDate"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+    </field>
+    <field name="noOfAdults" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.label" value="noOfAdults"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+    </field>
+    <field name="guestId" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.label" value="guestId"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+    </field>
+    <field name="reservationType" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="reservationType"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+    </field>
+    <field name="reservationFee" class="java.math.BigDecimal">
+        <property name="com.jaspersoft.studio.field.label" value="reservationFee"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+    </field>
+    <group name="reservationId">
+        <groupExpression><![CDATA[$F{reservationId}]]></groupExpression>
+    </group>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="72" splitType="Stretch">
+            <staticText>
+                <reportElement x="122" y="0" width="310" height="30" uuid="3f7a300b-17c2-4e5c-8e7c-0d610182c42f"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="20" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Wijayagiri Hotel - MATARA]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="200" y="30" width="138" height="38" uuid="1382e1a5-72dc-4969-8696-e35ed8705c48"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[No 53, old thangalle road, matara]]></text>
+            </staticText>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="35" splitType="Stretch">
+            <staticText>
+                <reportElement x="60" y="0" width="220" height="18" uuid="637ec6ea-3eed-49a4-9534-3abd4e895360"/>
+                <textElement>
+                    <font size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Rooms Reserveds Full report]]></text>
+            </staticText>
+            <textField pattern="MMMMM dd, yyyy">
+                <reportElement x="370" y="1" width="100" height="16" uuid="cc6329ff-8864-4a14-ad8c-514e1791505f"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="338" y="2" width="30" height="16" uuid="872e8163-27a8-4938-9384-c1d81b3f2032"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text><![CDATA[Date :]]></text>
+            </staticText>
+        </band>
+    </pageHeader>
+    <columnHeader>
+        <band height="227" splitType="Stretch">
+            <componentElement>
+                <reportElement x="3" y="10" width="548" height="70" uuid="7ef19d26-fdfb-4628-98c4-8f3e1f93625e">
+                    <property name="com.jaspersoft.studio.layout"
+                              value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+                    <property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+                    <property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+                    <property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+                </reportElement>
+                <jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components"
+                          xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+                    <datasetRun subDataset="ReservedDataset" uuid="46e3c126-168c-47cd-af5c-c0b14edc09ef">
+                        <connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+                    </datasetRun>
+                    <jr:column width="50" uuid="ef17ef89-43f9-46da-9231-874da8daba0d">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="50" height="30"
+                                               uuid="f7dba228-fe6e-4d57-b174-c156051ee545"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Reserved Id]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="50" height="30"
+                                               uuid="56766046-d56c-4a2e-94e6-ed2235692685"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{reservedId}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="50" uuid="aa855ef0-44c5-434b-9874-d9a243017b50">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="50" height="30"
+                                               uuid="06a5807e-73f7-4125-83ab-862e3cccbf21"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Reserved Date]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="50" height="30"
+                                               uuid="7fc57f13-ed03-467d-aedf-9e99de46e744"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{reservedDate}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="60" uuid="7117a14b-c751-41d4-924d-133bfd390913">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="60" height="30"
+                                               uuid="42fcfd8b-cb60-456e-a828-922690906964"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Reserved Time]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="60" height="30"
+                                               uuid="bf1130fa-2252-4f56-a65d-343a79a5bf6a"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{reservedTime}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="80" uuid="dceeeb07-1e9b-4225-ac17-45a03a0f7570">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="80" height="30"
+                                               uuid="0f6954cc-a9f5-4363-9fb4-ffa5304413fb"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Guest NIC]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="80" height="30"
+                                               uuid="84126aa9-86da-44ac-a610-ad56fce90d45"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{nic}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="60" uuid="0e78d71e-7c4d-4e2a-a582-e5efe4f13ed2">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="60" height="30"
+                                               uuid="52f4e210-8f41-4163-82db-9ae6e1271af5"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Telephone No]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="60" height="30"
+                                               uuid="e2555bf4-7f06-4bbf-bc77-758812dc8e26"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{telephoneNo}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="60" uuid="8eecb333-6387-4568-8034-5ecabf3313e9">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="60" height="30"
+                                               uuid="b1adad14-6488-490d-98b1-88c5b1a64539"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Reservation Id]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="60" height="30"
+                                               uuid="1fed64b9-f714-4438-ab04-0dc7db94f7e6"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{reservationId}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="50" uuid="6a174744-bd53-490c-8b4a-5c1204927ef6">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="50" height="30"
+                                               uuid="1472ae2a-96c7-4a29-a89d-5d495dd75148"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Check In Date]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="50" height="30"
+                                               uuid="77c041fb-a424-49fe-a4e3-e39a2538e3b9"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{checkInDate}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="50" uuid="c4928a39-e64b-45ba-89ec-6070bf7ae6bc">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column8"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="50" height="30"
+                                               uuid="037cf1bd-6dcd-4407-a4e6-669f23ba9a07"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Check Out Date]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="50" height="30"
+                                               uuid="a4e5f096-63f7-495b-89ad-8b00647d4eaa"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{checkOutDate}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="40" uuid="eb382267-25e3-4d19-b34d-670e02595dea">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column9"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="40" height="30"
+                                               uuid="1eb73142-0af7-4972-a432-33cf9ccbe098"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[No Of Adults]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="40" height="30"
+                                               uuid="642c85cf-7552-422d-8dfc-399c2dc92d79"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{noOfAdults}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="50" uuid="8a3d3a75-a8bd-4dce-82c1-229f76901b2a">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column10"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="50" height="30"
+                                               uuid="7325843c-f293-4414-a425-956812f2507a"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Reservation Fee]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="50" height="30"
+                                               uuid="cfb77d1f-fab5-4daf-8b89-2097335b30d9"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{reservationFee}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                </jr:table>
+            </componentElement>
+        </band>
+    </columnHeader>
+    <pageFooter>
+        <band height="54" splitType="Stretch">
+            <staticText>
+                <reportElement x="5" y="7" width="117" height="22" uuid="8cdac148-f7cb-436c-b7fd-cd273ca9f161"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text><![CDATA[No Of Reserveds:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="122" y="9" width="120" height="18" uuid="9b499e50-6723-4fd5-9144-7cbf665480a2"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="425" y="17" width="100" height="26" uuid="6a544c9d-befa-4b59-8d9b-b95691200320"/>
+                <text><![CDATA[............................... Authorized Signature]]></text>
+            </staticText>
+        </band>
+    </pageFooter>
+</jasperReport>

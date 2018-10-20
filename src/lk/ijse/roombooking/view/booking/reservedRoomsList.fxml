@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="reservedRoomsListPane" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="1184.0"
+            style="-fx-background-color: white; -fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.141"
+            fx:controller="lk.ijse.roombooking.controller.ReservedRoomsListController">
+    <children>
+        <TableView fx:id="bookingTable" editable="true" layoutX="70.0" layoutY="89.0" prefHeight="396.0"
+                   prefWidth="1036.0">
+            <columns>
+                <TableColumn prefWidth="91.0" text="Guest ID"/>
+                <TableColumn prefWidth="194.99996948242188" text="Guest Name"/>
+                <TableColumn prefWidth="130.0" text="Room ID"/>
+                <TableColumn prefWidth="139.0" text="Room Category"/>
+                <TableColumn prefWidth="116.0" text="Room Floor"/>
+                <TableColumn prefWidth="122.0" text="Room QTY"/>
+                <TableColumn prefWidth="146.0" text="Room QTY"/>
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+        </TableView>
+        <Label layoutX="392.0" layoutY="14.0" prefHeight="50.0" prefWidth="401.0" text="Reserved Rooms List">
+            <font>
+                <Font name="Arial Black" size="33.0"/>
+            </font>
+        </Label>
+        <ImageView fx:id="closeLabel" fitHeight="36.0" fitWidth="29.0" layoutX="1141.0" layoutY="14.0"
+                   onMouseClicked="#closeLabelClicked" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/Delete_50px_1.png"/>
+            </image>
+        </ImageView>
+        <JFXButton disable="true" layoutX="921.0" layoutY="542.0" prefHeight="50.0" prefWidth="185.0"
+                   style="-fx-background-color: #FF962F; -fx-background-radius: 3em;" text="Cancel Reserved"
+                   textFill="WHITE"/>
+        <JFXButton disable="true" layoutX="746.0" layoutY="542.0" prefHeight="50.0" prefWidth="125.0"
+                   style="-fx-background-color: #FF962F; -fx-background-radius: 3em;" text="Update" textFill="WHITE"/>
+    </children>
+</AnchorPane>

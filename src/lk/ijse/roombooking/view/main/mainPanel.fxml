@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="mainPanelPane" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#mainPanelKey" prefHeight="862.0"
+            prefWidth="1681.0" style="-fx-background-color: #FF962F;" xmlns="http://javafx.com/javafx/8.0.141"
+            fx:controller="lk.ijse.roombooking.controller.maincontroller.MainPanelController">
+    <children>
+        <AnchorPane layoutY="-2.0" prefHeight="855.0" prefWidth="289.0" style="-fx-background-color: #282C2C;"
+                    styleClass="dashboardPanel">
+            <children>
+                <AnchorPane fx:id="dashboardPanel" layoutX="-1.0" layoutY="145.0" prefHeight="11.0" prefWidth="305.0">
+                    <children>
+                        <Label layoutX="-2.0" layoutY="-2.0" prefHeight="48.0" prefWidth="312.0"
+                               styleClass="dashboardPanel"/>
+                        <Label fx:id="dashboardLabel" layoutX="91.0" layoutY="2.0"
+                               onMouseClicked="#dashboardLabelClicked" onMouseEntered="#dashboardLabelMouseEnterd"
+                               onMouseExited="#dashboardLabelMouseExited" prefHeight="46.0" prefWidth="213.0"
+                               styleClass="dashboardPanel" text="Dashboard - [F1]" textFill="#828282">
+                            <font>
+                                <Font name="Times New Roman" size="18.0"/>
+                            </font>
+                        </Label>
+                        <ImageView fx:id="dashboardImage" fitHeight="35.0" fitWidth="33.0" layoutX="39.0" layoutY="4.0"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../assets/Combo Chart_50px_2.png"/>
+                            </image>
+                        </ImageView>
+                        <Label fx:id="dashboardIndicator" layoutX="-4.0" prefHeight="46.0" prefWidth="9.0"
+                               style="-fx-background-color: #FF962F;" visible="false"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="reservationPanel" layoutX="-3.0" layoutY="193.0" prefHeight="46.0" prefWidth="305.0"
+                            styleClass="dashboardPanel">
+                    <children>
+                        <Label layoutX="2.0" layoutY="-2.0" prefHeight="48.0" prefWidth="310.0"/>
+                        <ImageView fx:id="reservationImage" fitHeight="35.0" fitWidth="33.0" layoutX="40.0"
+                                   layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../assets/Hotel Check In_50px.png"/>
+                            </image>
+                        </ImageView>
+                        <Label fx:id="reservationLabel" layoutX="92.0" layoutY="-8.0"
+                               onMouseClicked="#reservationLabelClicked" onMouseEntered="#reservationLabelMouseEnterd"
+                               onMouseExited="#reservationLabelMouseExited" prefHeight="51.0" prefWidth="213.0"
+                               text="Reservation - [F2]" textFill="#828282">
+                            <font>
+                                <Font name="Times New Roman" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="reservationIndicator" layoutX="-3.0" prefHeight="46.0" prefWidth="9.0"
+                               style="-fx-background-color: #FF962F;" visible="false"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="roomSearchPanel" layoutX="-1.0" layoutY="331.0" prefHeight="47.0" prefWidth="305.0"
+                            styleClass="dashboardPanel">
+                    <children>
+                        <Label layoutX="-1.0" layoutY="-1.0" prefHeight="48.0" prefWidth="310.0"/>
+                        <ImageView fx:id="roomSearchImage" fitHeight="35.0" fitWidth="33.0" layoutX="37.0" layoutY="6.0"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../assets/Filter_50px.png"/>
+                            </image>
+                        </ImageView>
+                        <Label fx:id="roomSearchLabel" layoutX="90.0" onMouseClicked="#roomSearchLabelClicked"
+                               onMouseEntered="#roomSearchLabelMouseEnterd" onMouseExited="#roomSearchLabelMouseExited"
+                               prefHeight="46.0" prefWidth="219.0" text="Room Search - [F5]" textFill="#828282">
+                            <font>
+                                <Font name="Times New Roman" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="roomSearchIndicator" layoutX="-6.0" layoutY="1.0" prefHeight="46.0"
+                               prefWidth="9.0" style="-fx-background-color: #FF962F;" visible="false"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="roomMasterPanel" layoutX="-1.0" layoutY="379.0" prefHeight="48.0" prefWidth="305.0"
+                            styleClass="dashboardPanel">
+                    <children>
+                        <Label layoutX="-1.0" prefHeight="48.0" prefWidth="310.0"/>
+                        <ImageView fx:id="roomMasterImage" fitHeight="35.0" fitWidth="33.0" layoutX="40.0" layoutY="6.0"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../assets/Door Opened_50px.png"/>
+                            </image>
+                        </ImageView>
+                        <Label fx:id="roomMasterLabel" layoutX="92.0" layoutY="-2.0"
+                               onMouseClicked="#roomMasterLabelClicked" onMouseEntered="#roomMasterLabelMouseEnterd"
+                               onMouseExited="#roomMasterLabelMouseExiteed" prefHeight="46.0" prefWidth="213.0"
+                               text="Room Master - [F6]" textFill="#828282">
+                            <font>
+                                <Font name="Times New Roman" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="roomMasterIndicator" layoutX="-6.0" layoutY="2.0" prefHeight="46.0"
+                               prefWidth="9.0" style="-fx-background-color: #FF962F;" visible="false"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="viewsPanel" layoutX="2.0" layoutY="427.0" prefHeight="48.0" prefWidth="305.0"
+                            styleClass="dashboardPanel">
+                    <children>
+                        <Label layoutX="-1.0" prefHeight="48.0" prefWidth="310.0"/>
+                        <ImageView fx:id="viewImage" fitHeight="35.0" fitWidth="33.0" layoutX="41.0" layoutY="6.0"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../assets/View Details_64px.png"/>
+                            </image>
+                        </ImageView>
+                        <Label fx:id="viewsLabel" layoutX="92.0" layoutY="2.0" onMouseClicked="#viewsLabelClicked"
+                               onMouseEntered="#viewsLabelMouseEnterd" onMouseExited="#viewsLabelMouseExited"
+                               prefHeight="46.0" prefWidth="213.0" text="Views - [F7]" textFill="#828282">
+                            <font>
+                                <Font name="Times New Roman" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="viewsIndicator" layoutX="-6.0" prefHeight="48.0" prefWidth="9.0"
+                               style="-fx-background-color: #FF962F;" visible="false"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="guestsPanel" layoutX="-1.0" layoutY="476.0" prefHeight="48.0" prefWidth="305.0"
+                            styleClass="dashboardPanel">
+                    <children>
+                        <Label layoutX="-1.0" prefHeight="48.0" prefWidth="310.0"/>
+                        <ImageView fx:id="guestsImage" fitHeight="35.0" fitWidth="33.0" layoutX="41.0" layoutY="6.0"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../assets/User Group Man Man_50px.png"/>
+                            </image>
+                        </ImageView>
+                        <Label fx:id="guestsLabel" layoutX="93.0" layoutY="-7.0" onMouseClicked="#guestsLabelClicked"
+                               onMouseEntered="#guestsLabelMouseEnterd" onMouseExited="#guestsLabelMouseExited"
+                               prefHeight="51.0" prefWidth="213.0" text="Guests - [F8]" textFill="#828282">
+                            <font>
+                                <Font name="Times New Roman" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="guestsIndicator" layoutX="-6.0" layoutY="2.0" prefHeight="46.0" prefWidth="9.0"
+                               style="-fx-background-color: #FF962F;" visible="false"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="logOutPanel" layoutX="-3.0" layoutY="717.0" prefHeight="48.0" prefWidth="305.0"
+                            styleClass="dashboardPanel">
+                    <children>
+                        <Label layoutX="2.0" prefHeight="48.0" prefWidth="310.0"/>
+                        <ImageView fx:id="logOutImage" fitHeight="35.0" fitWidth="33.0" layoutX="43.0" layoutY="8.0"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../assets/Export_50px.png"/>
+                            </image>
+                        </ImageView>
+                        <Label fx:id="logOutLabel" layoutX="99.0" layoutY="7.0" onMouseClicked="#logOutLabelClicked"
+                               onMouseEntered="#logOutLabelMouseEnterd" onMouseExited="#logOutLabelMouseExited"
+                               prefHeight="35.0" prefWidth="213.0" text="Log Out" textFill="#828282">
+                            <font>
+                                <Font name="Times New Roman" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="logOutIndicator" layoutX="-3.0" prefHeight="48.0" prefWidth="9.0"
+                               style="-fx-background-color: #FF962F;" visible="false"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="exitPanel" layoutX="-3.0" layoutY="765.0" prefHeight="48.0" prefWidth="305.0"
+                            styleClass="dashboardPanel">
+                    <children>
+                        <Label prefHeight="48.0" prefWidth="310.0"/>
+                        <ImageView fx:id="exitImage" fitHeight="35.0" fitWidth="33.0" layoutX="40.0" layoutY="8.0"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../assets/Shutdown_48px.png"/>
+                            </image>
+                        </ImageView>
+                        <Label fx:id="exitLabel" layoutX="97.0" onMouseClicked="#exitLabelClicked"
+                               onMouseEntered="#exitLabelMouseEnterd" onMouseExited="#exitLabelMouseExited"
+                               prefHeight="48.0" prefWidth="213.0" text="Exit" textFill="#828282">
+                            <font>
+                                <Font name="Times New Roman" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="exitIndicator" layoutX="-4.0" prefHeight="48.0" prefWidth="9.0"
+                               style="-fx-background-color: #FF962F;" visible="false"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="manageExtrasPanel" layoutX="-1.0" layoutY="524.0" prefHeight="48.0" prefWidth="305.0"
+                            styleClass="dashboardPanel">
+                    <children>
+                        <Label layoutX="-1.0" layoutY="3.0" prefHeight="48.0" prefWidth="310.0"/>
+                        <ImageView fx:id="manageExtrasImage" fitHeight="35.0" fitWidth="33.0" layoutX="41.0"
+                                   layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../assets/Food_50px_1.png"/>
+                            </image>
+                        </ImageView>
+                        <Label fx:id="manageExtrasLabel" layoutX="93.0" layoutY="-7.0"
+                               onMouseClicked="#manageExtrasLabelClicked" onMouseEntered="#manageExtrasLabelMouseEnterd"
+                               onMouseExited="#manageExtrasLabelMouseExited" prefHeight="51.0" prefWidth="213.0"
+                               text="Manage Extras - [F9]" textFill="#828282">
+                            <font>
+                                <Font name="Times New Roman" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="manageExtrasIndicator" layoutX="-6.0" prefHeight="48.0" prefWidth="9.0"
+                               style="-fx-background-color: #FF962F;" visible="false"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="departingPanel" layoutX="-1.0" layoutY="239.0" prefHeight="46.0" prefWidth="305.0"
+                            styleClass="dashboardPanel">
+                    <children>
+                        <Label layoutX="-1.0" layoutY="-2.0" prefHeight="48.0" prefWidth="310.0"/>
+                        <ImageView fx:id="departingImage" fitHeight="35.0" fitWidth="33.0" layoutX="40.0" layoutY="6.0"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../assets/Hotel Chekc Out_50px.png"/>
+                            </image>
+                        </ImageView>
+                        <Label fx:id="departingLabel" layoutX="92.0" layoutY="-7.0"
+                               onMouseClicked="#departingLabelClicked" onMouseEntered="#departingLabelMouseEnterd"
+                               onMouseExited="#departingLabelMouseExited" prefHeight="51.0" prefWidth="213.0"
+                               text="Departing - [F3]" textFill="#828282">
+                            <font>
+                                <Font name="Times New Roman" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="departingIndicator" layoutX="-3.0" prefHeight="46.0" prefWidth="9.0"
+                               style="-fx-background-color: #FF962F;" visible="false"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="reservedPanel" layoutX="-1.0" layoutY="285.0" prefHeight="46.0" prefWidth="312.0"
+                            styleClass="dashboardPanel">
+                    <children>
+                        <Label layoutX="-1.0" layoutY="-2.0" prefHeight="48.0" prefWidth="312.0"/>
+                        <ImageView fx:id="reservedImage" fitHeight="35.0" fitWidth="33.0" layoutX="40.0" layoutY="6.0"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../assets/Phone_50px.png"/>
+                            </image>
+                        </ImageView>
+                        <Label fx:id="reservedLabel" layoutX="91.0" layoutY="-3.0"
+                               onMouseClicked="#reservedLabelClicked" onMouseEntered="#reserveddLabelMouseEnterd"
+                               onMouseExited="#reserveddLabelMouseExited" prefHeight="51.0" prefWidth="213.0"
+                               text="Reserved - [F4]" textFill="#828282">
+                            <font>
+                                <Font name="Times New Roman" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="reservedIndicator" layoutX="-3.0" prefHeight="46.0" prefWidth="9.0"
+                               style="-fx-background-color: #FF962F;" visible="false"/>
+                    </children>
+                </AnchorPane>
+                <Label layoutX="21.0" layoutY="79.0" prefHeight="35.0" prefWidth="96.0" text="Main" textFill="#828282">
+                    <font>
+                        <Font size="32.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="12.0" layoutY="601.0" prefHeight="47.0" prefWidth="121.0" text="System"
+                       textFill="#828282">
+                    <font>
+                        <Font size="32.0"/>
+                    </font>
+                </Label>
+                <AnchorPane fx:id="settingPanel" layoutX="2.0" layoutY="669.0" prefHeight="48.0" prefWidth="305.0"
+                            styleClass="dashboardPanel">
+                    <children>
+                        <Label layoutY="-1.0" prefHeight="48.0" prefWidth="310.0"/>
+                        <ImageView fx:id="settingImage" fitHeight="35.0" fitWidth="33.0" layoutX="38.0" layoutY="6.0"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../assets/Horizontal Settings Mixer_50px.png"/>
+                            </image>
+                        </ImageView>
+                        <Label fx:id="settingLabel" layoutX="90.0" layoutY="-2.0"
+                               onMouseClicked="#systemSettingLabelClicked" onMouseEntered="#settingLabelMouseEnterd"
+                               onMouseExited="#settingLabelMouseExited" prefHeight="51.0" prefWidth="213.0"
+                               text="System Setting - [F10]" textFill="#828282">
+                            <font>
+                                <Font name="Times New Roman" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="settingIndicator" layoutX="-6.0" prefHeight="48.0" prefWidth="9.0"
+                               style="-fx-background-color: #FF962F;" visible="false"/>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="pnlTitel" layoutY="-7.0" prefHeight="74.0" prefWidth="1681.0"
+                    style="-fx-background-color: #FF962F;">
+            <children>
+                <Label fx:id="dateLabel" layoutX="1084.0" layoutY="14.0" prefHeight="46.0" prefWidth="213.0"
+                       textFill="WHITE">
+                    <font>
+                        <Font name="Arial Black" size="26.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="timeLabel" layoutX="1303.0" layoutY="14.0" prefHeight="46.0" prefWidth="225.0"
+                       textFill="WHITE">
+                    <font>
+                        <Font name="Arial Black" size="26.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="userTypeLabel" layoutX="1540.0" layoutY="14.0" prefHeight="46.0" prefWidth="121.0"
+                       text="Admin" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Black" size="26.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="28.0" layoutY="14.0" prefHeight="46.0" prefWidth="443.0"
+                       text="WIJAYAGIRI HOTEL - MATARA" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Black" size="26.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="loaderPanel" layoutX="319.0" layoutY="67.0" prefHeight="788.0" prefWidth="1357.0"
+                    style="-fx-background-color: white;"/>
+    </children>
+</AnchorPane>

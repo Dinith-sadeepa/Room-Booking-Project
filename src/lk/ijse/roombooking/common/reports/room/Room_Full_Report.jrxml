@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="Room_Full_Report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20"
+              rightMargin="20" topMargin="20" bottomMargin="20" uuid="8a13312c-6d4d-41ab-a03b-569ac4d81b9d">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="RoomBookingProjectDatabase"/>
+    <style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <subDataset name="RoomDataset" uuid="afcaec70-72cf-4009-bb91-02dd8916860f">
+        <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+        <property name="com.jaspersoft.studio.data.defaultdataadapter" value="RoomBookingProjectDatabase"/>
+        <queryString language="SQL">
+            <![CDATA[select * from room]]>
+        </queryString>
+        <field name="roomId" class="java.lang.Integer">
+            <property name="com.jaspersoft.studio.field.label" value="roomId"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="room"/>
+        </field>
+        <field name="bedType" class="java.lang.String">
+            <property name="com.jaspersoft.studio.field.label" value="bedType"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="room"/>
+        </field>
+        <field name="roomType" class="java.lang.String">
+            <property name="com.jaspersoft.studio.field.label" value="roomType"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="room"/>
+        </field>
+        <field name="roomCategory" class="java.lang.String">
+            <property name="com.jaspersoft.studio.field.label" value="roomCategory"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="room"/>
+        </field>
+        <field name="roomFloor" class="java.lang.Integer">
+            <property name="com.jaspersoft.studio.field.label" value="roomFloor"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="room"/>
+        </field>
+        <field name="roomPrice" class="java.math.BigDecimal">
+            <property name="com.jaspersoft.studio.field.label" value="roomPrice"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="room"/>
+        </field>
+        <field name="status" class="java.lang.String">
+            <property name="com.jaspersoft.studio.field.label" value="status"/>
+            <property name="com.jaspersoft.studio.field.tree.path" value="room"/>
+        </field>
+        <group name="roomId">
+            <groupExpression><![CDATA[$F{roomId}]]></groupExpression>
+        </group>
+    </subDataset>
+    <queryString language="SQL">
+        <![CDATA[select * from room]]>
+    </queryString>
+    <field name="roomId" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.label" value="roomId"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="room"/>
+    </field>
+    <field name="bedType" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="bedType"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="room"/>
+    </field>
+    <field name="roomType" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="roomType"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="room"/>
+    </field>
+    <field name="roomCategory" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="roomCategory"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="room"/>
+    </field>
+    <field name="roomFloor" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.label" value="roomFloor"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="room"/>
+    </field>
+    <field name="roomPrice" class="java.math.BigDecimal">
+        <property name="com.jaspersoft.studio.field.label" value="roomPrice"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="room"/>
+    </field>
+    <field name="status" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="status"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="room"/>
+    </field>
+    <group name="roomId">
+        <groupExpression><![CDATA[$F{roomId}]]></groupExpression>
+    </group>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="70" splitType="Stretch">
+            <staticText>
+                <reportElement x="122" y="0" width="310" height="30" uuid="5720bb13-812d-41e4-a1b2-b3342d9e21c0"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="20" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Wijayagiri Hotel - MATARA]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="200" y="30" width="138" height="38" uuid="7fe69f26-ddcb-4bbf-adcb-8bc111a93035"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[No 53, old thangalle road, matara]]></text>
+            </staticText>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="35" splitType="Stretch">
+            <staticText>
+                <reportElement x="60" y="0" width="130" height="18" uuid="ae413cb2-b1f2-49a3-ba79-83d4c9d1ff4d"/>
+                <textElement>
+                    <font size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Room Full report]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="338" y="2" width="30" height="16" uuid="46d8db7d-d9e7-4d21-a346-3dc4bc1dd9e9"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text><![CDATA[Date :]]></text>
+            </staticText>
+            <textField pattern="MMMMM dd, yyyy">
+                <reportElement x="370" y="1" width="100" height="16" uuid="4b4c3e50-12c3-43c0-aefc-ee6584cc04d0"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageHeader>
+    <columnHeader>
+        <band height="93" splitType="Stretch">
+            <componentElement>
+                <reportElement x="63" y="10" width="428" height="67" uuid="6632693a-31d6-4eaa-90c3-fa574381143d">
+                    <property name="com.jaspersoft.studio.layout"
+                              value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+                    <property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+                    <property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+                    <property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+                </reportElement>
+                <jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components"
+                          xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+                    <datasetRun subDataset="RoomDataset" uuid="57f98891-4e14-4a73-ae89-f54c3cc32373">
+                        <connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+                    </datasetRun>
+                    <jr:column width="40" uuid="dec7c991-d2c7-4ed6-be96-d4791b6c5289">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="40" height="30"
+                                               uuid="6fd638c4-d21a-4002-ba3b-a9a5242f3633"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Room Id]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="40" height="30"
+                                               uuid="ff83003e-aa05-44d4-a9da-768e145487f0"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{roomId}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="80" uuid="af90d196-87d2-4cbc-a30a-ff15945959ca">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="80" height="30"
+                                               uuid="c8b679fa-0349-425a-9395-90c1d22f0abf"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Room Category]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="80" height="30"
+                                               uuid="2a759744-44d9-4387-b0fa-827e73a2f191"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{roomCategory}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="60" uuid="d8a2862b-ef41-45e8-836f-e57fcd567888">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="60" height="30"
+                                               uuid="cafd4654-a75b-4674-954a-b3f198b32376"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Room Type]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="60" height="30"
+                                               uuid="648e33a1-f4b6-4f5a-b5fa-cab24113c5b5"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{roomType}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="60" uuid="1a8cb3de-e315-45a1-a108-8bba9d1f70cc">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="60" height="30"
+                                               uuid="8d8ba3c1-0281-40b5-ba7f-0027efa7a1e4"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Bed Type]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="60" height="30"
+                                               uuid="a68ffeb0-1132-40b1-b419-3e6b0fdfc677"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{bedType}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="50" uuid="9ceaabc5-65c2-4261-887d-f60d94289537">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="50" height="30"
+                                               uuid="0cef8d17-bcd0-44f4-af6c-ba5e9ec442a8"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Room Floor]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="50" height="30"
+                                               uuid="8f1e4f63-bb7e-41f9-b5a1-69ad88e96007"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{roomFloor}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="70" uuid="c9527ae4-8617-44fe-b905-9403af1dc57b">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="70" height="30"
+                                               uuid="4a371e6b-0282-465d-bcbb-0e8cfb09d596"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Room Price]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="70" height="30"
+                                               uuid="30747ade-0431-439a-9238-24ac837b1883"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{roomPrice}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="60" uuid="55bf88aa-d464-4b72-895a-778171b7383c">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <staticText>
+                                <reportElement x="0" y="0" width="60" height="30"
+                                               uuid="0f0629d0-1412-4a5f-aee4-f44b8b0ad779"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Status]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="60" height="30"
+                                               uuid="36b55f74-ded8-4c33-b283-26a54697e07f"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                </jr:table>
+            </componentElement>
+        </band>
+    </columnHeader>
+    <pageFooter>
+        <band height="54" splitType="Stretch">
+            <textField>
+                <reportElement x="103" y="10" width="120" height="18" uuid="8cb63524-5656-4ed4-8900-d02e6d616418"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="5" y="7" width="94" height="22" uuid="0d82c295-cfc8-47f3-aafe-162172da9eab"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text><![CDATA[No Of Rooms :]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="425" y="17" width="100" height="26" uuid="5eb398e7-b317-4c72-a8d2-67e481e5a802"/>
+                <text><![CDATA[............................... Authorized Signature]]></text>
+            </staticText>
+        </band>
+    </pageFooter>
+</jasperReport>

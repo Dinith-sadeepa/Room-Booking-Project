@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="dashboardPane" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="788.0" prefWidth="1357.0"
+            style="-fx-background-color: white; -fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.141"
+            fx:controller="lk.ijse.roombooking.controller.maincontroller.DashboardController">
+    <children>
+        <Label layoutX="732.0" layoutY="205.0" prefHeight="189.0" prefWidth="259.0"
+               style="-fx-background-color: white; -fx-border-color: black;"/>
+        <Label layoutX="251.0" layoutY="46.0" prefHeight="59.0" prefWidth="856.0"
+               text="Welcome To Wijayagiri Hotel - Matara" textFill="#ff962f">
+            <font>
+                <Font name="Arial Black" size="40.0"/>
+            </font>
+        </Label>
+        <Label layoutX="86.0" layoutY="205.0" prefHeight="189.0" prefWidth="259.0"
+               style="-fx-background-color: white; -fx-border-color: black;"/>
+        <Label layoutX="777.0" layoutY="233.0" prefHeight="50.0" prefWidth="169.0" text="Booked Rooms">
+            <font>
+                <Font name="Times New Roman Bold" size="24.0"/>
+            </font>
+        </Label>
+        <JFXButton fx:id="reservedRoomsButton" layoutX="173.0" layoutY="292.0" prefHeight="50.0" prefWidth="86.0"
+                   style="-fx-background-color: #FF962F; -fx-background-radius: 3em;" text="5" textFill="WHITE"/>
+        <Label layoutX="409.0" layoutY="205.0" prefHeight="189.0" prefWidth="259.0"
+               style="-fx-background-color: white; -fx-border-color: black;"/>
+        <Label layoutX="454.0" layoutY="233.0" prefHeight="50.0" prefWidth="186.0" text="Available Rooms">
+            <font>
+                <Font name="Times New Roman Bold" size="24.0"/>
+            </font>
+        </Label>
+        <JFXButton fx:id="availableRoomsButton" layoutX="496.0" layoutY="292.0" prefHeight="50.0" prefWidth="86.0"
+                   style="-fx-background-color: #FF962F; -fx-background-radius: 3em;" text="5" textFill="WHITE"/>
+        <Label layoutX="123.0" layoutY="233.0" prefHeight="50.0" prefWidth="186.0" text="Reserved Rooms">
+            <font>
+                <Font name="Times New Roman Bold" size="24.0"/>
+            </font>
+        </Label>
+        <JFXButton fx:id="bookedRoomsButton" layoutX="819.0" layoutY="292.0" prefHeight="50.0" prefWidth="86.0"
+                   style="-fx-background-color: #FF962F; -fx-background-radius: 3em;" text="5" textFill="WHITE"/>
+        <Label layoutX="1058.0" layoutY="205.0" prefHeight="189.0" prefWidth="259.0"
+               style="-fx-background-color: white; -fx-border-color: black;"/>
+        <Label layoutX="1085.0" layoutY="233.0" prefHeight="50.0" prefWidth="207.0" text="Today Reservations">
+            <font>
+                <Font name="Times New Roman Bold" size="24.0"/>
+            </font>
+        </Label>
+        <JFXButton fx:id="todayReservationButton" layoutX="1145.0" layoutY="292.0" prefHeight="50.0" prefWidth="86.0"
+                   style="-fx-background-color: #FF962F; -fx-background-radius: 3em;" text="5" textFill="WHITE"/>
+    </children>
+</AnchorPane>

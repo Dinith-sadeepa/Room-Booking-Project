@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="signInPanel" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="367.0" prefWidth="796.0"
+            style="-fx-background-color: white; -fx-border-color: #FF962F; -fx-border-width: 0.25em;"
+            xmlns="http://javafx.com/javafx/8.0.141"
+            fx:controller="lk.ijse.roombooking.controller.usercontroller.LogInController">
+    <children>
+        <Label layoutX="236.0" layoutY="27.0" prefHeight="46.0" prefWidth="180.0" text="WIJAYAGIRI"
+               textAlignment="JUSTIFY" textFill="#ff962f">
+            <font>
+                <Font name="Arial Black" size="26.0"/>
+            </font>
+        </Label>
+        <JFXTextField fx:id="userNameText" focusColor="#ff962f" labelFloat="true" layoutX="217.0" layoutY="120.0"
+                      onAction="#userNameAction" prefHeight="37.0" prefWidth="396.0" promptText="User Name">
+            <font>
+                <Font name="Arial Black" size="18.0"/>
+            </font>
+        </JFXTextField>
+        <JFXPasswordField fx:id="passwordText" focusColor="#ff962f" labelFloat="true" layoutX="217.0" layoutY="199.0"
+                          onAction="#passwordAction" prefHeight="37.0" prefWidth="396.0" promptText="Password">
+            <font>
+                <Font name="Arial Black" size="18.0"/>
+            </font>
+        </JFXPasswordField>
+        <JFXButton fx:id="cancelButton" layoutX="583.0" layoutY="286.0" onAction="#cancelButtonAction" prefHeight="36.0"
+                   prefWidth="160.0" style="-fx-background-color: #FF962F; -fx-background-radius: 3em;" text="Cancel"
+                   textFill="WHITE"/>
+        <ImageView fitHeight="55.0" fitWidth="58.0" layoutX="139.0" layoutY="112.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../../assets/Circled%20User%20Male_64px.png"/>
+            </image>
+        </ImageView>
+        <ImageView fitHeight="55.0" fitWidth="58.0" layoutX="139.0" layoutY="191.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../../assets/Key_64px.png"/>
+            </image>
+        </ImageView>
+        <JFXButton fx:id="signUpButton" layoutX="49.0" layoutY="292.0" onAction="#signUpButtonAction" prefHeight="36.0"
+                   prefWidth="120.0" style="-fx-background-color: #FF962F; -fx-background-radius: 3em;" text="Sign Up"
+                   textFill="WHITE"/>
+        <Label layoutX="430.0" layoutY="27.0" prefHeight="46.0" prefWidth="93.0" text="Hotel" textAlignment="JUSTIFY"
+               textFill="#ff962f">
+            <font>
+                <Font name="Arial Black" size="26.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

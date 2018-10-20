@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="677.0" prefWidth="1344.0"
+            style="-fx-background-color: white; -fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.141"
+            fx:controller="lk.ijse.roombooking.controller.FoodsDrinksController">
+    <children>
+        <JFXTextField focusColor="#ff962f" layoutX="37.0" layoutY="70.0" prefHeight="31.0" prefWidth="1271.0"/>
+        <JFXButton fx:id="addFoodsDrinksButton" layoutX="998.0" layoutY="131.0" onAction="#addFoodsDrinksAction"
+                   prefHeight="36.0" prefWidth="80.0" style="-fx-background-color: #FF962F; -fx-background-radius: 3em;"
+                   text="New" textFill="WHITE"/>
+        <JFXButton disable="true" layoutX="1111.0" layoutY="131.0" prefHeight="36.0" prefWidth="80.0"
+                   style="-fx-background-color: #FF962F; -fx-background-radius: 3em;" text="Edit" textFill="WHITE"/>
+        <JFXButton disable="true" layoutX="1218.0" layoutY="131.0" prefHeight="36.0" prefWidth="80.0"
+                   style="-fx-background-color: #FF962F; -fx-background-radius: 3em;" text="Delete" textFill="WHITE"/>
+        <Label layoutX="38.0" layoutY="157.0" prefHeight="20.0" prefWidth="245.0" text="List Of Meals">
+            <font>
+                <Font name="Times New Roman" size="17.0"/>
+            </font>
+        </Label>
+        <TableView layoutX="171.0" layoutY="191.0" prefHeight="396.0" prefWidth="1003.0">
+            <columns>
+                <TableColumn prefWidth="139.99996948242188" text="Meal ID"/>
+                <TableColumn minWidth="3.0517578125E-5" prefWidth="86.0" text="Meal Type"/>
+                <TableColumn minWidth="0.0" prefWidth="147.0" text="Description"/>
+                <TableColumn prefWidth="54.0" text="Unit Price"/>
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+        </TableView>
+        <Label layoutX="38.0" layoutY="34.0" prefWidth="519.0" text="Enter Name to Search Meals">
+            <font>
+                <Font name="Times New Roman" size="17.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

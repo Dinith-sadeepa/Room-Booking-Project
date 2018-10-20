@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="departingPane" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="788.0" prefWidth="1357.0"
+            style="-fx-background-color: white; -fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.141"
+            fx:controller="lk.ijse.roombooking.controller.bookingcontroller.DepartingController">
+    <children>
+        <AnchorPane layoutX="3.0" layoutY="4.0" prefHeight="231.0" prefWidth="1349.0"
+                    style="-fx-background-color: white; -fx-border-color: black;">
+            <children>
+                <Label layoutX="22.0" layoutY="14.0" prefHeight="29.0" prefWidth="219.0" text="Reservation Details">
+                    <font>
+                        <Font name="Arial Black" size="19.0"/>
+                    </font>
+                </Label>
+                <JFXTextField fx:id="reservationIdText" focusColor="#ff962f" labelFloat="true" layoutX="336.0"
+                              layoutY="79.0" onAction="#reservationIdTextAction" prefHeight="31.0" prefWidth="207.0"
+                              promptText="Reservation ID"/>
+                <JFXTextField fx:id="guestNicText" focusColor="#ff962f" labelFloat="true" layoutX="692.0" layoutY="79.0"
+                              prefHeight="31.0" prefWidth="254.0" promptText="Guest NIC"/>
+                <JFXDatePicker fx:id="checkInDate" defaultColor="#ff962f" editable="false" layoutX="72.0"
+                               layoutY="143.0" prefHeight="44.0" prefWidth="236.0" promptText="Check - In Date"/>
+                <JFXDatePicker fx:id="checkOutDate" defaultColor="#ff962f" editable="false" layoutX="611.0"
+                               layoutY="143.0" prefHeight="44.0" prefWidth="236.0" promptText="Check - Out Date"/>
+                <JFXTimePicker fx:id="checkInTime" defaultColor="#ff962f" layoutX="350.0" layoutY="156.0"
+                               promptText="Check - In Time"/>
+                <JFXTimePicker fx:id="checkOutTime" defaultColor="#ff962f" layoutX="899.0" layoutY="156.0"
+                               promptText="Check - Out Time"/>
+                <JFXTextField fx:id="departingIdText" focusColor="#ff962f" labelFloat="true" layoutX="72.0"
+                              layoutY="79.0" prefHeight="31.0" prefWidth="207.0" promptText="Departing ID"/>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="3.0" layoutY="241.0" prefHeight="541.0" prefWidth="838.0"
+                    style="-fx-background-color: white; -fx-border-color: black;">
+            <children>
+                <Label layoutX="22.0" layoutY="14.0" prefHeight="29.0" prefWidth="189.0" text="Rooms Details">
+                    <font>
+                        <Font name="Arial Black" size="19.0"/>
+                    </font>
+                </Label>
+                <TableView fx:id="bookingTable" editable="true" layoutX="22.0" layoutY="71.0" prefHeight="432.0"
+                           prefWidth="795.0">
+                    <columns>
+                        <TableColumn prefWidth="91.0" text="Room Id"/>
+                        <TableColumn prefWidth="194.99996948242188" text="Room Category"/>
+                        <TableColumn prefWidth="130.0" text="Room Type"/>
+                        <TableColumn prefWidth="139.0" text="Bed Type"/>
+                        <TableColumn prefWidth="92.0" text="Floor"/>
+                        <TableColumn prefWidth="146.0" text="Room Price"/>
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="849.0" layoutY="241.0" prefHeight="541.0" prefWidth="504.0"
+                    style="-fx-border-color: black; -fx-background-color: white;">
+            <children>
+                <Label layoutX="14.0" layoutY="14.0" prefHeight="29.0" prefWidth="189.0" text="Payments">
+                    <font>
+                        <Font name="Arial Black" size="19.0"/>
+                    </font>
+                </Label>
+                <JFXTextField fx:id="bankText" disable="true" focusColor="#ff962f" labelFloat="true" layoutX="55.0"
+                              layoutY="147.0" onAction="#bankAction" prefHeight="31.0" prefWidth="160.0"
+                              promptText="Bank"/>
+                <JFXTextField fx:id="branchText" disable="true" focusColor="#ff962f" labelFloat="true" layoutX="246.0"
+                              layoutY="147.0" onAction="#branchAction" prefHeight="31.0" prefWidth="150.0"
+                              promptText="Branch"/>
+                <Label layoutX="31.0" layoutY="212.0" prefHeight="36.0" prefWidth="150.0"
+                       text="Bill Total                   :"/>
+                <Label fx:id="billTotalLabel" layoutX="202.0" layoutY="219.0" prefHeight="28.0" prefWidth="171.0"/>
+                <JFXButton fx:id="payButton" disable="true" layoutX="42.0" layoutY="469.0" onAction="#payButtonAction"
+                           prefHeight="36.0" prefWidth="160.0"
+                           style="-fx-background-color: #FF962F; -fx-background-radius: 3em;" text="Pay"
+                           textFill="WHITE">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="cancelButton" layoutX="218.0" layoutY="469.0" prefHeight="36.0" prefWidth="160.0"
+                           style="-fx-background-color: #FF962F; -fx-background-radius: 3em;" text="Cancel"
+                           textFill="WHITE">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </JFXButton>
+                <JFXRadioButton fx:id="chequeRButton" layoutX="238.0" layoutY="18.0" onAction="#chequeRAction"
+                                prefHeight="21.0" prefWidth="150.0" style="-jfx-selected-color: #FF962F;"
+                                text="Cheque Details">
+                    <font>
+                        <Font name="Arial Black" size="13.0"/>
+                    </font>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="paymentMethod"/>
+                    </toggleGroup>
+                </JFXRadioButton>
+                <JFXTextField fx:id="chequeNumberText" disable="true" focusColor="#ff962f" labelFloat="true"
+                              layoutX="55.0" layoutY="56.0" onAction="#chequeNoAction" prefHeight="31.0"
+                              prefWidth="340.0" promptText="Cheque Number"/>
+                <JFXDatePicker fx:id="dateOfExpire" defaultColor="#ff962f" disable="true" editable="false"
+                               layoutX="55.0" layoutY="96.0" onAction="#dateOfExpireAction" prefHeight="21.0"
+                               prefWidth="207.0" promptText="Date Of Expire"/>
+                <JFXRadioButton fx:id="cashRButton" layoutX="153.0" layoutY="18.0" onAction="#cashRAction"
+                                prefHeight="21.0" prefWidth="80.0" selected="true" style="-jfx-selected-color: #FF962F;"
+                                text="Cash" toggleGroup="$paymentMethod">
+                    <font>
+                        <Font name="Arial Black" size="13.0"/>
+                    </font>
+                </JFXRadioButton>
+                <Label layoutX="31.0" layoutY="255.0" prefHeight="36.0" prefWidth="150.0"
+                       text="Paid                          :"/>
+                <Label layoutX="31.0" layoutY="299.0" prefHeight="36.0" prefWidth="160.0" text="Amount In Arrears   :"/>
+                <Label fx:id="amountInArrears" layoutX="203.0" layoutY="306.0" prefHeight="28.0" prefWidth="171.0"/>
+                <Label fx:id="paidLabel" layoutX="202.0" layoutY="259.0" prefHeight="28.0" prefWidth="171.0"/>
+                <Label layoutX="31.0" layoutY="348.0" prefHeight="36.0" prefWidth="150.0"
+                       text="Paying                      :"/>
+                <JFXTextField fx:id="payingText" focusColor="#ff962f" labelFloat="true" layoutX="203.0" layoutY="351.0"
+                              onAction="#payingTextAction" prefHeight="31.0" prefWidth="160.0"/>
+                <Label layoutX="31.0" layoutY="402.0" prefHeight="36.0" prefWidth="150.0"
+                       text="Balance                    :"/>
+                <Label fx:id="balanceLabel" layoutX="202.0" layoutY="406.0" prefHeight="28.0" prefWidth="171.0"/>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

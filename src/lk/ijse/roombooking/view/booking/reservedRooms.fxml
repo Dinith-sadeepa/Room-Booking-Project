@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="reservedPane" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="788.0" prefWidth="1357.0"
+            style="-fx-background-color: white; -fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.141"
+            fx:controller="lk.ijse.roombooking.controller.bookingcontroller.ReservedRoomsController">
+    <children>
+        <AnchorPane layoutX="4.0" layoutY="4.0" prefHeight="231.0" prefWidth="1349.0"
+                    style="-fx-background-color: white; -fx-border-color: black;">
+            <children>
+                <Label layoutX="22.0" layoutY="14.0" prefHeight="29.0" prefWidth="189.0" text="Guest Details">
+                    <font>
+                        <Font name="Arial Black" size="19.0"/>
+                    </font>
+                </Label>
+                <JFXTextField fx:id="nicNumberText" focusColor="#ff962f" labelFloat="true" layoutX="455.0"
+                              layoutY="85.0" onAction="#nicNumberAction" prefHeight="31.0" prefWidth="207.0"
+                              promptText="NIC Number"/>
+                <JFXTextField fx:id="guestIdText" disable="true" focusColor="#ff962f" labelFloat="true" layoutX="268.0"
+                              layoutY="85.0" prefHeight="31.0" prefWidth="122.0" promptText="Guest ID"/>
+                <JFXTextField fx:id="telephoneNoText" disable="true" focusColor="#ff962f" labelFloat="true"
+                              layoutX="1103.0" layoutY="85.0" prefHeight="31.0" prefWidth="207.0"
+                              promptText="Telephone No"/>
+                <JFXDatePicker fx:id="checkInDate" defaultColor="#ff962f" disable="true" editable="false"
+                               layoutX="397.0" layoutY="150.0" prefHeight="39.0" prefWidth="236.0"
+                               promptText="Check - In Date"/>
+                <JFXDatePicker fx:id="checkOutDate" defaultColor="#ff962f" disable="true" editable="false"
+                               layoutX="701.0" layoutY="150.0" prefHeight="39.0" prefWidth="236.0"
+                               promptText="Check - Out Date"/>
+                <JFXDatePicker fx:id="reservedDate" defaultColor="#ff962f" disable="true" editable="false"
+                               layoutX="93.0" layoutY="150.0" prefHeight="39.0" prefWidth="236.0"
+                               promptText="Reserved Date"/>
+                <JFXTextField fx:id="guestNameText" disable="true" focusColor="#ff962f" labelFloat="true"
+                              layoutX="731.0" layoutY="85.0" prefHeight="31.0" prefWidth="302.0"
+                              promptText="Guest Name"/>
+                <JFXTextField fx:id="reservationIdText" disable="true" focusColor="#ff962f" labelFloat="true"
+                              layoutX="93.0" layoutY="85.0" prefHeight="31.0" prefWidth="122.0"
+                              promptText="Reservation ID"/>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="4.0" layoutY="241.0" prefHeight="252.0" prefWidth="838.0"
+                    style="-fx-background-color: white; -fx-border-color: black;">
+            <children>
+                <Label layoutX="22.0" layoutY="14.0" prefHeight="29.0" prefWidth="189.0" text="Rooms Details">
+                    <font>
+                        <Font name="Arial Black" size="19.0"/>
+                    </font>
+                </Label>
+                <TableView fx:id="roomTable" editable="true" layoutX="22.0" layoutY="71.0" prefHeight="165.0"
+                           prefWidth="795.0">
+                    <columns>
+                        <TableColumn prefWidth="91.0" text="Room Id"/>
+                        <TableColumn prefWidth="194.99996948242188" text="Room Category"/>
+                        <TableColumn prefWidth="130.0" text="Room Type"/>
+                        <TableColumn prefWidth="139.0" text="Bed Type"/>
+                        <TableColumn prefWidth="92.0" text="Floor"/>
+                        <TableColumn prefWidth="146.0" text="Room Price"/>
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="850.0" layoutY="241.0" prefHeight="541.0" prefWidth="504.0"
+                    style="-fx-border-color: black; -fx-background-color: white;">
+            <children>
+                <Label layoutX="14.0" layoutY="14.0" prefHeight="29.0" prefWidth="150.0" text="Payments">
+                    <font>
+                        <Font name="Arial Black" size="19.0"/>
+                    </font>
+                </Label>
+                <JFXTextField fx:id="bankText" disable="true" focusColor="#ff962f" labelFloat="true" layoutX="57.0"
+                              layoutY="195.0" onAction="#bankAction" prefHeight="31.0" prefWidth="160.0"
+                              promptText="Bank"/>
+                <JFXTextField fx:id="branchText" disable="true" focusColor="#ff962f" labelFloat="true" layoutX="248.0"
+                              layoutY="195.0" onAction="#branchAction" prefHeight="31.0" prefWidth="150.0"
+                              promptText="Branch"/>
+                <JFXButton fx:id="payButton" disable="true" layoutX="84.0" layoutY="458.0" onAction="#payButtonAction"
+                           prefHeight="36.0" prefWidth="160.0"
+                           style="-fx-background-color: #FF962F; -fx-background-radius: 3em;" text="Pay"
+                           textFill="WHITE">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="cancelButton" layoutX="260.0" layoutY="458.0" prefHeight="36.0" prefWidth="160.0"
+                           style="-fx-background-color: #FF962F; -fx-background-radius: 3em;" text="Cancel"
+                           textFill="WHITE">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </JFXButton>
+                <JFXRadioButton fx:id="chequeRButton" layoutX="238.0" layoutY="18.0" onAction="#chequeRAction"
+                                prefHeight="21.0" prefWidth="150.0" style="-jfx-selected-color: #FF962F;"
+                                text="Cheque Details">
+                    <font>
+                        <Font name="Arial Black" size="13.0"/>
+                    </font>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="paymentMethod"/>
+                    </toggleGroup>
+                </JFXRadioButton>
+                <JFXTextField fx:id="chequeNoText" disable="true" focusColor="#ff962f" labelFloat="true" layoutX="55.0"
+                              layoutY="70.0" onAction="#chequeNoAction" prefHeight="31.0" prefWidth="340.0"
+                              promptText="Cheque Number"/>
+                <JFXDatePicker fx:id="dateOfExpire" defaultColor="#ff962f" disable="true" editable="false"
+                               layoutX="61.0" layoutY="139.0" onAction="#dateOfExpireAction" prefHeight="21.0"
+                               prefWidth="207.0" promptText="Date Of Expire"/>
+                <JFXRadioButton fx:id="cashRButton" layoutX="153.0" layoutY="18.0" onAction="#cashRAction"
+                                prefHeight="21.0" prefWidth="80.0" selected="true" style="-jfx-selected-color: #FF962F;"
+                                text="Cash" toggleGroup="$paymentMethod">
+                    <font>
+                        <Font name="Arial Black" size="13.0"/>
+                    </font>
+                </JFXRadioButton>
+                <Label layoutX="53.0" layoutY="286.0" prefHeight="36.0" prefWidth="150.0"
+                       text="Reservation Fee        :"/>
+                <Label fx:id="reservationFeeLabel" layoutX="224.0" layoutY="285.0" prefHeight="36.0" prefWidth="171.0"/>
+                <Label layoutX="53.0" layoutY="329.0" prefHeight="36.0" prefWidth="150.0"
+                       text="Paid                          :"/>
+                <JFXTextField fx:id="paidText" focusColor="#ff962f" layoutX="227.0" layoutY="331.0"
+                              onAction="#paidTextAction"/>
+                <Label layoutX="56.0" layoutY="383.0" prefHeight="36.0" prefWidth="150.0"
+                       text="Balance                    :"/>
+                <Label fx:id="balanceLabel" layoutX="227.0" layoutY="390.0" prefHeight="28.0" prefWidth="171.0"/>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="4.0" layoutY="512.0" prefHeight="252.0" prefWidth="838.0"
+                    style="-fx-background-color: white; -fx-border-color: black;">
+            <children>
+                <Label layoutX="22.0" layoutY="20.0" prefHeight="29.0" prefWidth="98.0" text="Facility">
+                    <font>
+                        <Font name="Arial Black" size="19.0"/>
+                    </font>
+                </Label>
+                <TableView fx:id="facilityTable" layoutX="22.0" layoutY="80.0" prefHeight="150.0" prefWidth="403.0">
+                    <columns>
+                        <TableColumn fx:id="selectFacilityColumn" prefWidth="59.0" text="F Id"/>
+                        <TableColumn prefWidth="131.0" text="Facility"/>
+                        <TableColumn prefWidth="243.0" text="Unit price"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+                <TableView fx:id="serviceTable" layoutX="431.0" layoutY="80.0" prefHeight="150.0" prefWidth="403.0">
+                    <columns>
+                        <TableColumn fx:id="selectFacilityColumn1" prefWidth="59.0" text="S Id"/>
+                        <TableColumn prefWidth="131.0" text="Service"/>
+                        <TableColumn prefWidth="243.0" text="Unit price"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+                <Label layoutX="431.0" layoutY="20.0" prefHeight="29.0" prefWidth="98.0" text="Service">
+                    <font>
+                        <Font name="Arial Black" size="19.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
